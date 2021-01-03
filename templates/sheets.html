@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/sheets.css')}}"
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}"> 
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap" rel="stylesheet">
+  <title>Sheets</title>
+</head>
+<body>
+   <div class="login">
+    <form action="{{ url_for('home') }}">
+        <button type="submit" class="submit" align="center" style="color:white;">Sign out</button>
+    </form>
+  </div>
+
+  <div class=div1>
+    <h1>ReInfo</h1>
+  </div>
+
+  <div id="particles-js">
+  <script type="text/javascript" src="{{ url_for('static', filename='js/particles.js')}}"></script>
+  <script type="text/javascript" src="{{ url_for('static', filename='js/app.js')}}"></script>
+
+   <div class="flex-container">
+      <div class="main"> 
+        <h1 class="message">Google Sheet has been successfully made</h1> <a class="link" href= "https://docs.google.com/spreadsheets/d/1KW1tCrEx8atX0UhmFcyr2EvMX2gCpPjQzFcCR-6hUfQ/edit?usp=sharing" target="_blank">Link to Google Sheet</a>
+      </div>
+    </div>
+
+    <form action="{{ url_for('menu') }}">
+        <button type="submit" class="Back" align="center" style="color:white;">Home</button>
+    </form>
+
+</body>
+</html>

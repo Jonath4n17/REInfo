@@ -1,0 +1,64 @@
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}"> 
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/content.css')}}">
+</head>
+
+<body>
+  <div class="login">
+    <form action="{{ url_for('home') }}">
+        <button type="submit" class="submit" align="center" style="color:white;">Sign out</button>
+    </form>
+  </div>
+
+  <div class=div1>
+    <h1>ReInfo</h1>
+  </div>
+
+  <div id="particles-js">
+  <script type="text/javascript" src="{{ url_for('static', filename='js/particles.js')}}"></script>
+  <script type="text/javascript" src="{{ url_for('static', filename='js/app.js')}}"></script>
+
+   <div class="flex-container">
+      <div class="column columnt">    
+        <table class="content-table">
+        <thead>
+          <tr>
+            <th>Description</th>
+            <th>Cost</th>
+          </tr>
+        </thead>
+        <tbody>
+        {% for c in content %}
+          <tr>
+            <td>{{ c }}</td>
+            <td>{{ content[c] }}</td>
+          </tr>
+        {% endfor %}
+        </tbody>
+        </table>
+      </div>
+      </div>
+      <div class="column bg-alt columni">
+        <img class="img" src = "{{ url_for('static', filename = path) }}" >
+      
+    </div>
+
+    <form action="{{ url_for('menu') }}">
+        <button type="submit" class="Back" align="center" style="color:white;">Back</button>
+    </form>
+  
+    <form action="{{ url_for('split') }}">
+        <button type="submit" class="Split" align="center" style="color:white;">Split</button>
+    </form>
+
+    <form action="{{ url_for('create') }}">
+        <button type="submit" class="Create" align="center" style="color:white;">Create a  Sheet</button>
+    </form>
+  
+</body>
+</html>

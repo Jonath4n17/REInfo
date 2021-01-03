@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign In</title>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css')}}"
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}">
+
+</head>
+<body>
+  <div id="particles-js">
+  <script type="text/javascript" src="{{ url_for('static', filename='js/particles.js')}}"></script>
+  <script type="text/javascript" src="{{ url_for('static', filename='js/app.js')}}"></script>
+  <div class="main">
+    <p class="sign" align="center">ReInfo</p>
+    <form class="form1" action="{{ url_for('menu')}}">
+      <input class="un " type="text" align="center" placeholder="Username" required>
+      <input class="pass" type="password" align="center" placeholder="Password" required>
+      <button type="submit" class="submit" align="center" style="color:white; font-family: 'IBM Plex Sans', sans-serif;">Sign in</button>
+      <p class="forgot" align="center"><a href="#">Forgot Password?</p>       
+         
+  </div>
+  </div>
+</body>
+</html>

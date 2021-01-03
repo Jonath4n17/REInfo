@@ -1,0 +1,188 @@
+body {
+  background-color: #262626;
+  font-family: 'IBM Plex Sans', sans-serif;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  margin: 0px;
+  }
+
+.login {
+  font-family: 'IBM Plex Sans', sans-serif;
+  
+}
+
+.div1{
+  height: 65px;
+  width:100%;
+  color: white;
+  background-color: rgb(64, 66, 68);
+  font-family: 'IBM Plex Sans', sans-serif;
+}
+
+h1{
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+  padding-top:10px;
+  text-align: center;
+  padding-left: 100px;
+}
+
+.login{
+  background: rgb(78, 168, 222);
+}
+
+.img{
+  max-width: 500px;
+  max-height: 500px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.submit {
+  cursor: pointer;
+  /* border-radius: 5em; */ 
+  /* display: inline; */
+  height: 65px;
+  background: rgb(78, 168, 222);
+  border: 1;
+  border-color: white;
+  border-top: none;
+  border-right: none;
+  border-bottom: none;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom: 8px;
+  float: right;
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 20px;
+  box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
+}
+
+.flex-container{
+	width: 80%;
+	min-height: 300px;
+	margin: 0 auto;
+	display: flex; 
+  position: absolute;
+  top:10%;
+  left: 13%;
+  font-family: 'IBM Plex Sans', sans-serif;
+}
+.flex-container, .columni {
+	padding: 10px;
+  border-radius: 1em;
+	background-color: rgb(64, 66, 68);
+	flex: 1; 
+  max-width: 450px;
+}
+.columnt{
+  position: absolute;
+  left:10%;
+}
+
+.columni{
+  position: absolute;
+   right: 17%;
+   top: 10%;
+}
+
+.content-table{
+  left:-2%;
+}
+
+.content-table{
+  position: relative;
+  margin: 0 auto;
+  padding: 18px;
+  border-collapse: collapse;
+  min-width: 400px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+}
+
+.content-table thead tr {
+  background-color: rgb(78, 168, 222);
+  color: white;
+  text-align: left;
+  font-weight: bold;
+}
+
+.content-table th, .content-table td{
+  padding: 12px 15px;
+}
+
+.content-table tbody tr{
+  border-bottom: 1px solid #dddddd;
+}
+
+.content-table tbody tr:nth-of-type(even){
+  background-color: lightgray;
+}
+
+.content-table tbody tr:last-of-type{
+  border-bottom: 2px solid rgb(78, 168, 222);
+}
+
+.content-table tbody tr:nth-of-type(odd){
+  background-color: white;
+}
+
+.Back {
+  cursor: pointer;
+  border-radius: 5em;
+  color: white;
+  background: rgb(78, 168, 222);
+  border: 0;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  font-family: 'Ubuntu', sans-serif;
+  margin-left: 35%;
+  font-size: 30px;
+  position: absolute;
+  top: 3%;
+  right: 70%;
+  box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
+}
+
+.Split{
+   cursor: pointer;
+  border-radius: 5em;
+  color: white;
+  background: rgb(78, 168, 222);
+  border: 0;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  font-family: 'Ubuntu', sans-serif;
+  margin-left: 35%;
+  font-size: 30px;
+  position: absolute;
+  top: 3%;
+  left: 32%;
+ box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
+}
+
+.Create{
+     cursor: pointer;
+  border-radius: 5em;
+  color: white;
+  background: linear-gradient(to right, rgb(83, 144, 217), rgb(105, 48, 195));
+  border: 2px white solid;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  font-family: 'Ubuntu', sans-serif;
+  margin-left: 35%;
+  font-size: 30px;
+  position: absolute;
+  top: 70%;
+  left: 7%;
+ box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
+} 
+

@@ -1,0 +1,112 @@
+body {
+  background-color: #262626;
+  font-family: 'IBM Plex Sans', sans-serif;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  margin: 0px;
+  }
+
+.login {
+  font-family: 'IBM Plex Sans', sans-serif;
+  
+}
+
+.div1{
+  height: 65px;
+  width:100%;
+  color: white;
+  background-color: rgb(64, 66, 68);
+  font-family: 'IBM Plex Sans', sans-serif;
+}
+
+h1{
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+  padding-top:10px;
+  text-align: center;
+  padding-left: 10px;
+}
+
+.login{
+  background: rgb(78, 168, 222);
+}
+
+.img{
+  max-width: 500px;
+  max-height: 500px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.submit {
+  cursor: pointer;
+  /* border-radius: 5em; */ 
+  /* display: inline; */
+  height: 65px;
+  background: rgb(78, 168, 222);
+  border: 1;
+  border-color: white;
+  border-top: none;
+  border-right: none;
+  border-bottom: none;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom: 8px;
+  float: right;
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 20px;
+  box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
+}
+
+.flex-container{
+	width: 400px;
+	min-height: 300px;
+	margin: 0 auto;
+	display: flex; 
+  position: absolute;
+  top:20%;
+  left:50%;
+  margin-left: -200px;
+  font-family: 'IBM Plex Sans', sans-serif;
+}
+
+.main {
+	padding: 10px;
+  border-radius: 1em;
+	background-color: rgb(64, 66, 68);
+	flex: 1; 
+  max-width: 450px;
+  font-family: 'IBM Plex Sans', sans-serif;
+  color: white;
+  text-align: center;
+}
+
+.link{
+  color: white;
+  font-family: 'IBM Plex Sans', sans-serif;
+}
+
+.message{
+  margin: auto;
+  vertical-align: middle;
+}
+
+.Back {
+  cursor: pointer;
+  border-radius: 5em;
+  color: white;
+  background: rgb(78, 168, 222);
+  border: 0;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  font-family: 'Ubuntu', sans-serif;
+  margin-left: 35%;
+  font-size: 30px;
+  position: absolute;
+  top: 60%;
+  right: 44%;
+  box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
+}

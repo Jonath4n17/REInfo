@@ -1,0 +1,51 @@
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css')}}"> 
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}"> 
+</head>
+
+<body>
+ 
+    <form action="{{ url_for('login') }}">
+        <button type="submit" class="submit" align="center" style="color:white;">Sign in</button>
+    </form>
+
+
+  <div class=div1>
+    <h1>ReInfo</h1>
+  </div>
+  
+  <div id="particles-js">
+  <script type="text/javascript" src="{{ url_for('static', filename='js/particles.js')}}"></script>
+  <script type="text/javascript" src="{{ url_for('static', filename='js/app.js')}}"></script>
+
+  <div class="flex-container">
+        <div class="text"><p>ReInfo is a cloud-based accounting application that allows users to easily track purchases and store reciepts using our free and easy to use app/website. All you have to do, is take a picture of the reciept and submit it, then our app will automatically store any relevant information found on the reciept. This new year, start off a on a fresh foot by keeping track of your purchases and saving money.</p></div></div>
+        <div class="column bg-alt"><img src="{{url_for('static', filename='images/home.png')}}" width="200" height="200" alt="camera"></div>
+    
+  
+  <!-- <div class="float-container">
+    <div class="float-child">
+      <div class="div2">
+        <p>The app Sajon, is a cloud-based accounting application that allows users to easily track purchases and store reciepts using our free and easy to use app. All you have to do, is take a picture of the reciept and submit it, then our app will automatically store any relevant information found on the reciept. This new year, start off a on a fresh foot by keeping track of your purchases and saving money.</p>
+      </div>
+    </div>
+
+  <div class="float-child">
+    <div class="div3">
+      <img src="https://static.bhphoto.com/images/images1000x1000/1536120359_1433711.jpg" width="200" height="200" alt="camera">
+      </div>
+    </div>
+  </div> -->
+  
+
+  <script> src="{{ url_for('static', filename='home.js') }}"</script>
+    
+  
+  </div>
+</body>
+
+</html>

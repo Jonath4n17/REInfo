@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/menu.css')}}"
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}"> 
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="login">
+    <form action="{{ url_for('home') }}">
+        <button type="submit" class="submit" align="center" style="color:white;">Sign out</button>
+    </form>
+  </div>
+
+  <div class=div1>
+    <h1>ReInfo</h1>
+  </div>
+
+  <div id="particles-js">
+  <script type="text/javascript" src="{{ url_for('static', filename='js/particles.js')}}"></script>
+  <script type="text/javascript" src="{{ url_for('static', filename='js/app.js')}}"></script>
+
+
+  <div class="FileUpload">
+    <div class="wrapper">
+      <div class="upload">
+        <form class="form" action="" method="POST" enctype="multipart/form-data">
+          <div class="input">
+            <input type="file" id="real-file" name="img" hidden="hidden" accept="image/png, .jpeg, .jpg" required>
+          <button class="upl" type="button" id="custom-button">Choose file</button>
+            
+          <label class="submitbtn">
+          <input type="submit" id="subbutton" value="Submit">
+          Submit
+          </label>
+        </form>
+      </div>
+    </div>
+    <div class="uploaded uploaded--one">
+      <i class="far fa-file-pdf"></i>
+      <div class="file">
+        <div class="file__name">
+          <span id="custom-text">No file chosen</span>
+        </div>
+          <script type="text/javascript">
+          const realFileBtn = document.getElementById("real-file");
+          const customBtn = document.getElementById("custom-button");
+          const customTxt = document.getElementById("custom-text");
+
+          customBtn.addEventListener("click", function() {
+            realFileBtn.click();
+          });
+
+          realFileBtn.addEventListener("change", function() {
+            if (realFileBtn.value) {
+              customTxt.innerHTML = realFileBtn.value.match(
+                /[\/\\]([\w\d\s\.\-\(\)]+)$/
+              )[1];
+            } else {
+              customTxt.innerHTML = "No file chosen";
+            }
+          });
+          </script>
+      </div>
+    </div>
+  </div>
+
+  {% if data|length < 1 %}
+
+  {% else %}
+
+  <table class="content-table">
+    <thead>
+      <tr>
+        <th>File Name</th>
+        <th>View</th>
+        <th>Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+    {% for d in data %}
+      <tr>
+        <td>{{ d.name }}</td>
+        <td>
+          <a href="/view/{{d.id}}">View</a>
+        </td>
+        <td>
+          <a href="/delete/{{d.id}}">Delete</a>
+        </td>
+      </tr>
+    {% endfor %}
+  </tbody>
+  </table>
+  {% endif %}
+
+</body>
+</html>

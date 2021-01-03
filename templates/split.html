@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/split.css')}}"> 
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}"> 
+
+  <title>Split</title>
+
+</head>
+<body>
+    <div class="login">
+    <form action="{{ url_for('home') }}">
+        <button type="submit" class="submit" align="center" style="color:white;">Sign out</button>
+    </form>
+  </div>
+
+  <div class=div1>
+    <h1>ReInfo</h1>
+  </div>
+
+  <div id="particles-js">
+  <script type="text/javascript" src="{{ url_for('static', filename='js/particles.js')}}"></script>
+  <script type="text/javascript" src="{{ url_for('static', filename='js/app.js')}}"></script>
+
+  <div class="flex-container">
+      <div class="column">    
+        <table class="content-table">
+        <thead>
+          <tr>
+            <th>Description</th>
+            <th>Cost</th>
+          </tr>
+        </thead>
+        <tbody>
+        {% for c in content %}
+          <tr>
+            <td>{{ c }}</td>
+            <td>{{ content[c] }}</td>
+          </tr>
+        {% endfor %}
+        </tbody>
+        </table>
+      </div>
+      <div class="middle"></div>
+      <div class="empty"></div>
+    </div>
+
+    <form action="{{ url_for('menu') }}">
+      <button type="submit" class="Home" align="center" style="color:white;">Home</button>
+    </form>
+    
+    <p id="demo"></p>
+<div class="box">
+  <table class="content-table">
+        <thead>
+          <tr>
+            <th>Customers</th>
+            <th>Cost</th>
+          </tr>
+        </thead>
+        <tbody>
+       
+          <tr>
+            <td>Person 1</td>
+            <td id="first"></td>
+          </tr>
+          <tr>
+            <td>Person 2</td>
+            <td id="second"></td>
+          </tr>
+          <tr>
+            <td>Person 3</td>
+            <td id="third"></td>
+          </tr>
+          <tr>
+            <td>Person 4</td>
+            <td id="fourth"></td>
+          </tr>
+     
+        </tbody>
+        </table>
+
+</div>
+
+
+<div class="cost">
+<script>
+function billsplit(){
+var prices = {{ prices }};
+
+onesum = 0;
+onesumfinal = 0;
+twosum = 0;
+twosumfinal = 0;
+threesum = 0;
+threesumfinal = 0;
+foursum = 0;
+foursumfinal = 0;
+finalorder = "";
+
+var tax = window.prompt("What percent is tax: ");
+var taxdeci = (tax/100)+1;
+
+var one = window.prompt("Which are/is your order(s): ");
+alert("Your order(s) are/is " + one);
+var onelength = one.toString().length;
+for (i = 0; i < onelength; i++) {
+  onesum += prices[((one%10)-1)];
+	one = Math.trunc(one/10);
+}
+onesumfinal = (Math.trunc((onesum*taxdeci) * 100))/100;
+alert("Your sum is $" + (onesumfinal));
+finalorder += ("Person 1 Sum: $" + onesumfinal + "<br>");
+
+var two = window.prompt("Which are/is your order(s): ");
+alert("Your order(s) are/is " + two);
+var twolength = two.toString().length;
+for (i = 0; i < twolength; i++) {
+  twosum += prices[((two%10)-1)];
+	two = Math.trunc(two/10);
+}
+twosumfinal = (Math.trunc((twosum*taxdeci) * 100))/100;
+alert("Your sum is $" + (twosumfinal));
+finalorder += ("Person 2 Sum: $" + twosumfinal + "<br>");
+
+var three = window.prompt("Which are/is your order(s): ");
+alert("Your order(s) are/is " + three);
+var threelength = three.toString().length;
+for (i = 0; i < threelength; i++) {
+  threesum += prices[((three%10)-1)];
+	three = Math.trunc(three/10);
+}
+threesumfinal = (Math.trunc((threesum*taxdeci) * 100))/100;
+alert("Your sum is $" + (threesumfinal));
+finalorder += ("Person 3 Sum: $" + threesumfinal + "<br>");
+
+var four = window.prompt("Which are/is your order(s): ");
+alert("Your order(s) are/is " + four);
+var fourlength = four.toString().length;
+for (i = 0; i < fourlength; i++) {
+  foursum += prices[((four%10)-1)];
+	four = Math.trunc(four/10);
+}
+foursumfinal = (Math.trunc((foursum*taxdeci) * 100))/100;
+alert("Your sum is $" + (foursumfinal));
+finalorder += ("Person 4 Sum: $" + foursumfinal + "<br>");
+
+document.getElementById("first").innerHTML = onesumfinal;
+document.getElementById("second").innerHTML = twosumfinal;
+document.getElementById("third").innerHTML = threesumfinal;
+document.getElementById("fourth").innerHTML = foursumfinal;
+}
+
+var v = document.getElementById("demo");
+v.className += "cost";
+document.getElementById("demo").style.color = "white";
+
+</script>
+
+</div>
+<input id="Bill Split" type="button" value="Bill Split" onclick="billsplit();" />
+
+</body>
+</html>

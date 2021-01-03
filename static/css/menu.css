@@ -1,0 +1,231 @@
+body {
+  background-color: #262626;
+  font-family: 'IBM Plex Sans', sans-serif;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  margin: 0px;
+  }
+
+.FileUpload {
+  position: absolute;
+  width: 500px;
+  top: 49%;
+  left: 49%;
+  margin: -350px 0 0 -240px;
+}
+
+.Results {
+  /* display: flex;
+  justify-content: center; */
+  width: 400px;
+  margin-left: 25px;
+  padding: 18px;
+  /* top: 15em;
+  right: 28em; */
+}
+
+.wrapper {
+  margin: 30px;
+  padding: 10px;
+  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+  border-radius: 10px;
+  background-color: white;
+  width: 415px;
+}
+
+.upload {
+  margin: 10px;
+  height: 85px;
+  border: 2px solid rgb(78, 168, 222);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+}
+.upload p {
+  margin-top: 12px;
+  line-height: 0;
+  font-size: 22px;
+  color: white;
+  letter-spacing: 1.5px;
+  font-family: 'Montserrat', sans-serif;
+
+}
+
+.upload__button {
+  background-color: rgb(78, 168, 222);
+  border-radius: 10px;
+  padding: 0px 8px 0px 10px;
+}
+.upload__button:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+#results{
+  font-size: 20px;
+  text-align:center;
+  color:white;
+}
+
+.uploaded {
+  width: 375px;
+  margin: 10px;
+  background-color: rgb(78, 168, 222);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.file {
+  display: flex;
+  flex-direction: column;
+}
+.file__name {
+  text-align: center;
+  /* display: flex; */
+  /* flex-direction: row; */
+  justify-content: space-between;
+  /* align-items: baseline; */
+  width: 300px;
+  color: white;
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.fa-times:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.fa-file-pdf {
+  padding: 15px;
+  font-size: 20px;
+  color: white;
+}
+
+#custom-button, .submitbtn {
+  border-radius: 10px;
+  margin-bottom: 10px;
+  font-size: 15px;
+  padding: 10px;
+  color: rgb(78, 168, 222);
+  font-family: 'Montserrat', sans-serif;
+  background: white;
+  border: 1px solid rgb(78, 168, 222);
+  align-self: center;
+}
+
+input[type="submit"] {
+    display: none;
+}
+
+@keyframes fade {
+    from {background-color: white; color: rgb(78, 168, 222); border: 1px solid rgb(78, 168, 222);}
+    to {background-color: rgb(78, 168, 222); color: white; border: 1px solid rgb(78, 168, 222)}    
+    
+}
+#custom-button:hover, .submitbtn:hover {
+    cursor: pointer;
+    background-color: rgb(78, 168, 222);
+    color: white;
+    animation-name: fade;
+    animation-duration: 1s;
+}
+
+#custom-text {
+  margin-left: 0px;
+  margin-top: 5px;
+  font-family: sans-serif;
+  color: black;
+}
+
+.content-table{
+  position: relative;
+  margin: 0 auto;
+  margin-top: 180px;
+  padding: 18px;
+  border-collapse: collapse;
+  min-width: 400px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+}
+
+.content-table thead tr {
+  background-color: rgb(78, 168, 222);
+  color: white;
+  text-align: left;
+  font-weight: bold;
+}
+
+.content-table th, .content-table td{
+  padding: 12px 15px;
+}
+
+.content-table tbody tr{
+  border-bottom: 1px solid #dddddd;
+}
+
+.content-table tbody tr:nth-of-type(even){
+  background-color: lightgray;
+}
+
+.content-table tbody tr:last-of-type{
+  border-bottom: 2px solid rgb(78, 168, 222)
+}
+
+.content-table tbody tr:nth-of-type(odd){
+  background-color: white;
+}
+
+.login {
+  font-family: 'IBM Plex Sans', sans-serif;
+  
+}
+
+.div1{
+  height: 65px;
+  width:100%;
+  color: white;
+  background-color: rgb(64, 66, 68);
+  font-family: 'IBM Plex Sans', sans-serif;
+}
+
+h1{
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+  padding-top:10px;
+  text-align: center;
+  padding-left: 100px;
+}
+
+.img{
+  max-width: 500px;
+  max-height: 500px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.submit {
+  cursor: pointer;
+  /* border-radius: 5em; */ 
+  /* display: inline; */
+  height: 65px;
+  background: rgb(78, 168, 222);
+  border: 1;
+  border-color: white;
+  border-top: none;
+  border-right: none;
+  border-bottom: none;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom: 8px;
+  float: right;
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 20px;
+  box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
+}
